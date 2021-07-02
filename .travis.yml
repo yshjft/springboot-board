@@ -4,7 +4,7 @@ jdk:
 
 branches:
   only:
-    - master
+    - main
 
 # Travis CI 서버의 Home
 cache:
@@ -29,6 +29,8 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deployed: true
+    on:
+      branch: main
 
 notifications:
   email:
