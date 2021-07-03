@@ -31,6 +31,19 @@ deploy:
     wait-until-deployed: true
     on:
       branch: main
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: hys-springboot-board-build
+    key: springboot_board.zip
+    bundle_type: zip
+    application: springboot-board
+    deployment_group: springboot-board-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+    on:
+      branch: main
+
 
 notifications:
   email:
