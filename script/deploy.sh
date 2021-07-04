@@ -24,7 +24,7 @@ JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 echo "> JAR_NAME: $JAR_NAME"
 
 echo "> $JAR_NAME 에 실행 권한 추가"
-chmod += $JAR_NAME
+sudo chmod += $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 nohup java -jar \
