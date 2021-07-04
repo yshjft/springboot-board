@@ -4,7 +4,7 @@ REPOSITORY=/home/ec2-user/app/step2
 PROJECT_NAME=srpingboot_board
 
 echo "> Build 파일 복사"
-cp $REPOSITORY/zip/*.jar $REPOSITORY
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 현재 구동 중인 어플리케이션 pid 확인"
 CURRENT_PID=$(pgrep -fl springboot_board | grep jar | awk '{print $1}')
